@@ -48,6 +48,7 @@ Function Get-EsxtopAPIstat {
     }
 }
 
+$vmhosts = get-vmhost
 
 foreach ($vmhost in $vmhosts){
 $defpath = ".\"+$vmhost.name+"def.txt"
