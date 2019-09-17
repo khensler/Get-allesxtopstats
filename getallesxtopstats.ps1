@@ -53,6 +53,6 @@ $vmhosts = get-vmhost
 foreach ($vmhost in $vmhosts){
 $defpath = ".\"+$vmhost.name+"def.txt"
 $statpath = ".\"+$vmhost.name+"stat.txt"
-$vmhost | get-esxtopapi | out-file -filepath $defpath-encoding ASCII
+$vmhost | get-esxtopapi | out-file -filepath $defpath -encoding ASCII
 $vmhost | get-esxtopapistat | out-file -filepath $statpath -encoding ASCII
 }
